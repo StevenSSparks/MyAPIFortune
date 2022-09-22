@@ -1,4 +1,4 @@
-#MyApiFortune
+# MyApiFortune
 A humor based project that provides API endpoints to return "fortunes" based on time, random number or ID. 
 
 ## Purpose
