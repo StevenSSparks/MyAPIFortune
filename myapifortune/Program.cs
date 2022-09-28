@@ -27,6 +27,8 @@ builder.Services.AddSwaggerGen(c =>
 // add custom services 
 builder.Services.AddSingleton<IGetFortune, GetFortuneService>();
 builder.Services.AddTransient<IAppVersionService, AppVersionService>();
+builder.Services.AddSingleton<IDiceRolling, DiceRollingService>();
+builder.Services.AddSingleton<IBlackJack, BlackJackService>();  
 
 var app = builder.Build();
 
