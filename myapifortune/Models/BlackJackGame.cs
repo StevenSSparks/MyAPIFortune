@@ -2,7 +2,7 @@
 {
     public class BlackJackGame
     {
-        public string Id { get; set; } = "";
+        public string Id { get; set; } = string.Empty;
         public List<Card> Deck { get; set; } = new();
         public List<Card> DiscardDeck { get; set; } = new();
         public int ComputerWins { get; set; } = 0;
@@ -13,7 +13,7 @@
         public List<Card> PlayerSplit { get; set; } = new();
         public bool PlayerSplitActive { get; set; } = false;
         public List<Card> ComputerCards { get; set; } = new();      
-        public string PlayerMove { get; set; }
+        public string PlayerMove { get; set; } = string.Empty;
 
     }
 }
