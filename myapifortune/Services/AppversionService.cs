@@ -1,5 +1,5 @@
-﻿using MyAPIFortune.Interfaces;
-using System.Reflection;
+﻿using System.Reflection;
+using MyAPIFortune.Interfaces;
 
 namespace MyAPIFortune.Services
 {
