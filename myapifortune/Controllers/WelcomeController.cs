@@ -8,10 +8,12 @@ namespace MyAPIFortune.Controllers
     {
 
         private readonly IAppVersionService _appVersionService;
+        private readonly IGetFortune _getFortune;
 
-        public WelcomeController(IAppVersionService appVersionService)
+        public WelcomeController(IAppVersionService appVersionService, IGetFortune getFortune)
         {
             _appVersionService = appVersionService;
+            _getFortune = getFortune;
         }
 
         [EnableCors("CORSPolicy")]
@@ -21,6 +23,7 @@ namespace MyAPIFortune.Controllers
         public IActionResult Index()
         {
             var v = new Models.WelcomeVM { AppVersion = _appVersionService.Version };
+            v.RandomFortune = _getFortune.ReturnTimeBasedFortune().phrase;
 
             // Returns a Static HTML Page
             return View(v);

@@ -1,21 +1,18 @@
-﻿
+﻿@using MyAPIFortune.Models;
+@model WelcomeVM;
 
-@*
-    model AdventureServer.Models.WelcomeVM;
-*@
-@{
-}
 <div>
     <p>
         <img src="~/img/myapifortune.png" /><br/>
-        Version: @Model.AppVersion <br /><br />
+        Version: @Model. <br />
         <b>Welcome Visitor!: </b> This is a simple API that returns a funny API themed fortune. 
         <br/> 
-        <br/>
-        Check out the <i> <a href="/swagger/">API Documentation</a> </i>
-        <br />
-        <br />
+        <br /> Your Fortune is: <br /><br />
+        <strong><i>@Model.RandomFortune</i></strong>
+        <br/><br />
+        <hr />
+        Check out the Swagger <i> <a href="/swagger/">API Documentation</a> </i>
         Developed by: <strong>Steve Sparks</strong> <br />
-        Source on GitHub:  <br />
+        Source on <a href="https://github.com/StevenSSparks/MyAPIFortune">GitHub</a>   <br />
     </p>     
 </div>
